@@ -1,0 +1,131 @@
+body {   
+    background: #F09819;  
+    background: -webkit-linear-gradient(to right, #EDDE5D, #F09819);
+    background: linear-gradient(to right, #EDDE5D, #F09819);
+}
+
+#start-msg {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    color: green;
+}
+#jakers {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: green;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.cell {
+    background-color: blueviolet;
+    width: 11vh;
+    height: 11vh;
+    margin: 3px;
+    padding-top: 1%;
+    cursor: pointer;
+}
+
+.inner {
+    background-color: silver;
+    width: 10vh;
+    height: 10vh;
+    margin: auto;   
+}
+
+.images {
+    height: 100%; width: 100%; object-fit:fill;
+}
+
+@media screen and (min-height: 670px) and (max-width: 1000px){
+    .cell {
+    width: 9vh;
+    height: 9vh;
+    }
+    .inner {
+        width: 8vh;
+        height: 8vh;
+    }
+    .images {
+        height: 100%; width: 100%; object-fit:fill;
+    }
+}
+
+.winMsg {
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    color: #ff0000;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.animCols {
+    animation-name: colors;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+@keyframes colors {
+    0% { color: red}
+    50% {color: #c322c1}
+    80% { color: #c1c322}
+    90% {color: #c32422}
+    100% { color: red}
+}
+
+#restart-btn {
+    font-size: larger;
+    color: #008000;
+    margin-bottom: 1.5rem;
+    margin-top: 0rem;
+}
+
+#restart-btn:hover {
+    cursor:pointer;
+    transition: 0.7s;
+    transform: scale(1.5, 1.5);
+    color: #b10202;
+    border-width: 2px;
+    border-color: green;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.inactive-cursor {
+    cursor: default;
+}
+
+.spin {
+    animation-name: spinner, change-color;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-duration: 0.35s;
+}
+
+@keyframes spinner {
+    from {
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to {
+      -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+    }
+}
+
+@keyframes change-color {
+    0% { background-color: blueviolet; }
+    60% { background-color: #83e22b; }
+    100% { background-color: blueviolet; }
+}
