@@ -1,1 +1,2 @@
 # Memory-Game
+This is the implementation of a memory game with images. It has a grid of 12 cases, each one containing an image on the back side and a neutral image on the front side. When the user clicks on a case, it spins and reveals the image from the back side. Two cases can successively be turned and if they contain the same image they remain turned. Otherwise, they spin back to the other side with the neutral image on it. The game is won when all the cases have been revealed.
